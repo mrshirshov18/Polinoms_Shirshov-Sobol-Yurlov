@@ -1,6 +1,4 @@
-set(target ${MP2_CUSTOM_PROJECT})
-
-project(${target})
+set(target ${MP2_CUSTOM})
 
 file(GLOB hdrs "*.h*")
 
