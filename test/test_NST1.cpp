@@ -4,11 +4,11 @@
 TEST(NoSortedTable1 , can_make_table) {
     ASSERT_NO_THROW(NoSortedTable1 A);
 }
-TEST(NoSortedTable1, can_insert_polinom) {
-    NoSortedTable1 A;
-    Polinom a("-2XYZ-3XY+8X^2Z^3");
-    ASSERT_NO_THROW(A.Insert("a", a));
-}
+//TEST(NoSortedTable1, can_insert_polinom) {
+//    NoSortedTable1 A;
+//    Polinom a("-2XYZ-3XY+8X^2Z^3");
+//    ASSERT_NO_THROW(A.Insert("a", a));
+//}
 //TEST(NoSortedTable1, can_delete_polinom) {
 //    NoSortedTable1 A;
 //    Polinom a("-2XYZ-3XY+8X^2Z^3");

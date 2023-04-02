@@ -37,6 +37,12 @@ public:
                 return &val.value;
         return nullptr;
     }
+    Polinom FindPol(Tkey key) {
+        for (auto& val : data)
+            if (val.key == key)
+                return val.value;
+        return Polinom();
+    }
     void Insert(Tkey key, TValue value) {
         if (Find(key))
             return;

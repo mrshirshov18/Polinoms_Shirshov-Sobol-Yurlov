@@ -4,7 +4,8 @@
 #include <list>
 #include <string>
 using namespace std;
-template <typename Tkey, typename TValue>
+typedef string Tkey;
+typedef Polinom TValue;
 class NoSortedTable2
 {
     struct TTableRec {
@@ -38,7 +39,12 @@ public:
                 return &val.value;
         return nullptr;
     }
-
+    Polinom FindPol(Tkey key) {
+        for (auto& val : data)
+            if (val.key == key)
+                return val.value;
+        return Polinom();
+    }
     void Insert(Tkey key, TValue value) {
         if (Find(key))
             return;

@@ -2,7 +2,8 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-template <typename Tkey, typename TValue>
+typedef string Tkey;
+typedef Polinom TValue;
 class HashTable1
 {
     int static const MaxSize = 101;
@@ -59,6 +60,20 @@ public:
             }
             if (data[ind].state == 0) {
                 return nullptr;
+            }
+            ind = hh(key);
+        }
+    }
+    TValue FindPol(Tkey key) {
+        int num = -1; //номер найденной строки
+        int ind = h(key);
+        while (1) {
+            if (data[ind].state == 1 && data[ind].key == key) {
+                num = ind;
+                return data[ind].value;
+            }
+            if (data[ind].state == 0) {
+                return Polinom();
             }
             ind = hh(key);
         }

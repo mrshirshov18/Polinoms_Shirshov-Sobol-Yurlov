@@ -1,6 +1,6 @@
-/*
-#include "postfix.h"
 
+#include "postfix.h"
+#include "NoSortedTable1.h"
 
 bool TPostfix::isNumber(char c) {
     return '0' <= c && c <= '9';
@@ -200,72 +200,32 @@ void TPostfix::ToPostfix() {
     }
 }
 
-void TPostfix::GetValues(int number_of_table) {
+void TPostfix::GetValues(int n, NoSortedTable1 A, NoSortedTable2 B, SortedTable C, HashTable1 D, HashTable2 G, TreeTable E) {
     for (auto& op : operands) {
-        /*switch(number_of_table){
+        //op.second=A.FindPol(op.first);
+        switch(n){
         case(1):
-            op.second = *Not_Sorted_Table1.find(op.first)
+            op.second = A.FindPol(op.first);
         break;
         case(2):
-            op.second = *Not_Sorted_Table2.find(op.first)
+            op.second = B.FindPol(op.first);
         break;
+
         case 3:
-            op.second = *Sorted_Table.find(op.first)
-        break;*/
-        /*case 4:
-            op.second = *Tree_Table.find(op.first)
+            op.second = C.FindPol(op.first);
+        break;
+        case 4:
+            op.second = D.FindPol(op.first);
         break;
         case 5:
-            op.second = *Hash_Table1.find(op.first)
+            op.second = G.FindPol(op.first);
         break;
         case 6:
-            op.second = *Hash_Table2.find(op.first)
+            op.second = E.FindPol(op.first);
         break;
-        }*/
+        }
     }
 }
 
-T TPostfix::Calculate(int number_of_table) { // ¬вод переменных, вычисление по постфиксной форме
-    //GetValues(input, output);
-    Stack<T> st;
-    //T leftoperand();
-    //T rightoperand();
-    for (auto& lexem : postfix) {
-        //switch (lexem.second[0]) 
-        if (lexem.second[0] == '+') {
-            T rightoperand = st.top();
-            st.pop();
-            T leftoperand = st.top();
-            st.pop();
-            st.push(leftoperand + rightoperand);
-        }
-        else if (lexem.second[0] == '-') {
-            T rightoperand = st.top();
-            st.pop();
-            T leftoperand = st.top();
-            st.pop();
-            st.push(leftoperand - rightoperand);
-        }
-        //case '*':
-        //    rightoperand = st.top();
-        //    st.pop();
-        //    leftoperand = st.top();
-        //    st.pop();
-        //    st.push(leftoperand * rightoperand);
-        //    break;
-        //case '/':
-        //    rightoperand = st.top();
-        //    st.pop();
-        //    leftoperand = st.top();
-        //    st.pop();
-        //    st.push(leftoperand / rightoperand);
-        //    break;
-        else {
-            if (lexem.first == variable)
-                st.push(operands[lexem.second]);
-            else
-                st.push(T(lexem.second));
-        }
-    }
-    return st.top();
-}*/
+
+

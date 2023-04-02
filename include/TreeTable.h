@@ -3,7 +3,8 @@
 #include <string>
 #include <vector>
 using namespace std;
-template <typename Tkey, typename TValue>
+typedef string Tkey;
+typedef Polinom TValue;
 class TreeTable
 {
     struct TTableRec {
@@ -65,7 +66,7 @@ class TreeTable
             return;
         Give(p->pLeft);
         arr.push_back(p->data.key + " = " + p->data.value.GivePolinom());
-        Give(p->Right);
+        Give(p->pRight);
     }
 public:
     void Print() {
@@ -77,6 +78,13 @@ public:
         if (pNode == nullptr)
             return nullptr;
         return &pNode->data.value;
+    }
+    TValue FindPol(Tkey key) {
+
+        TNode* pNode = FindNode(key, pRoot);
+        if (pNode == nullptr)
+            return Polinom();
+        return pNode->data.value;
     }
     void Insert(Tkey key, TValue value) {
         //TNode* Node = Find(key, pRoot);

@@ -5,7 +5,7 @@
 #include "SortedTable.h"
 #include "HashTable1.h"
 #include "TreeTable.h"
-
+#include "Postfix.h"
 
 int main()
 {
@@ -13,6 +13,7 @@ int main()
     Polinom b("XYZ+3XY+9X^2Z");
     NoSortedTable1 A;
     Polinom c = a + b;
+    Polinom mult=a*b;
     cout << a.Point(1.0, 1.0, 1.0) << endl;
     a.Print(); cout << endl;
     b.Print(); cout << endl;
@@ -33,6 +34,9 @@ int main()
     cout << endl;
     Polinom d = a - b;
     d.Print(); cout << endl;
+    cout << "mult=   ";
+    mult.Print();
+    cout << endl;
     
     A.Insert("a", a);
     A.Insert("b", b);
@@ -43,6 +47,8 @@ int main()
     Polinom* pa = A.Find("a");
     pa->Print();
     cout << endl;
+
+
     cout << "Table";
     cout << endl;
     vector<string> temp = A.GiveTable();
@@ -53,7 +59,7 @@ int main()
     cout << endl;
 
 
-    NoSortedTable2 <string, Polinom> B;
+    NoSortedTable2 B;
     B.Insert("a", a);
     B.Insert("b", b);
     B.Insert("c", c);
@@ -65,8 +71,10 @@ int main()
     cout << endl;
     cout << endl;
 
+    
 
-    SortedTable <string, Polinom> C;
+
+    SortedTable  C;
     C.Insert("a", a);
     C.Insert("b", b);
     C.Insert("c", c);
@@ -79,7 +87,7 @@ int main()
     cout << endl;
 
 
-    HashTable1 <string, Polinom> D;
+    HashTable1  D;
     D.Insert("a", a);
     D.Insert("a", a);
     D.Insert("b", b);
@@ -95,7 +103,7 @@ int main()
     cout << endl;
 
 
-    TreeTable <string, Polinom> E;
+    TreeTable E;
     E.Insert("a", a);
     E.Insert("b", b);
     E.Insert("c", c);
@@ -104,4 +112,24 @@ int main()
     E.Print();
     Polinom* pe = E.Find("a");
     pe->Print();
+
+    HashTable2  G;
+    G.Insert("a", a);
+    G.Insert("a", a);
+    G.Insert("b", b);
+    G.Insert("c", c);
+    G.Insert("c", c);
+    G.Delete("b");
+
+
+    cout<<endl;
+    TPostfix tre("a+c+1");
+    Polinom res=tre.Calculate(1,A,B,C,D,G,E);
+    cout<<"res = ";
+    res.Print();
+    cout << endl;
+    TPostfix tfgdf("a*a+c+1");
+    Polinom res2 = tfgdf.Calculate(1, A, B, C, D, G, E);
+    cout << "res = ";
+    res2.Print();
 }

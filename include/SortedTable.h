@@ -3,7 +3,8 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-template <typename Tkey, typename TValue>
+typedef string Tkey;
+typedef Polinom TValue;
 class SortedTable
 {
     struct TTableRec {
@@ -48,6 +49,12 @@ public:
         if (n > -1)
             return &data[n].value;
         return nullptr;
+    }
+    TValue FindPol(Tkey key) {
+        int n = binary_search(key);
+        if (n > -1)
+            return data[n].value;
+        return Polinom();
     }
     void Insert(Tkey key, TValue value) {
         if (Find(key))

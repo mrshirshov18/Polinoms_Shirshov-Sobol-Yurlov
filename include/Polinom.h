@@ -59,7 +59,7 @@ public:
     Polinom operator-(double n);
     Polinom operator+(Polinom second);
     Polinom operator-(Polinom second);
-    //Polinom operator*(Polinom second);
+    Polinom operator*(Polinom second);
     //Polinom operator/(Polinom second);
 };
 

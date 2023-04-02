@@ -547,3 +547,23 @@ Polinom Polinom::operator+(Polinom second) {
 Polinom Polinom::operator-(Polinom second) {
     return *(this) + second * (-1);
 }
+Polinom Polinom::operator*(Polinom second) {
+    Polinom ans("0");
+    ans.pol.pop_back();
+    Polinom Ans("0");
+    Ans.pol.pop_back();
+    for (auto& elem1 : pol) {
+        for (auto& elem2 : second.pol) {
+            Monom temp;
+            temp.sign=elem1.sign*elem2.sign;
+            temp.degree= elem1.degree + elem2.degree; //не работает если p не 10!!!!
+            temp.number= elem1.number * elem2.number;
+            Polinom tmp("0");
+            tmp.pol.pop_back();
+            tmp.pol.push_back(temp);
+            Ans=ans+tmp;
+            ans=Ans;
+        }
+    }
+    return Ans;
+}
