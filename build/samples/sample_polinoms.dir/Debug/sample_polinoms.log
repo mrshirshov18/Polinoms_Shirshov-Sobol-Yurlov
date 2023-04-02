@@ -1,0 +1,17 @@
+﻿  sample_polinoms.cpp
+C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\Polinom.h(51,28): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\SortedTable.h(16,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\SortedTable.h(14): message : while compiling class template member function 'int SortedTable<std::string,Polinom>::binary_search(Tkey)'
+          with
+          [
+              Tkey=std::string
+          ]
+C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\SortedTable.h(47): message : see reference to function template instantiation 'int SortedTable<std::string,Polinom>::binary_search(Tkey)' being compiled
+          with
+          [
+              Tkey=std::string
+          ]
+C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\samples\sample_polinoms.cpp(69): message : see reference to class template instantiation 'SortedTable<std::string,Polinom>' being compiled
+C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\TreeTable.h(44): warning C4715: 'TreeTable<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,Polinom>::IsLeaf': not all control paths return a value
+C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\TreeTable.h(60): warning C4715: 'TreeTable<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,Polinom>::FindParent': not all control paths return a value
+  sample_polinoms.vcxproj -> C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\build\bin\sample_polinoms.exe

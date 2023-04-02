@@ -1,0 +1,10 @@
+^C:\USERS\LUBAS\ONEDRIVE\РАБОЧИЙ СТОЛ\ПРОГА\MP2-LAB4-POLINOM\POLINOMS_SHIRSHOV-SOBOL-YURLOV\BUILD\CMAKEFILES\B8CD9A44099AFA2ED7609F3534ECC3FA\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/lubas/OneDrive/Рабочий стол/Прога/mp2-lab4-Polinom/Polinoms_Shirshov-Sobol-Yurlov" "-BC:/Users/lubas/OneDrive/Рабочий стол/Прога/mp2-lab4-Polinom/Polinoms_Shirshov-Sobol-Yurlov/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/lubas/OneDrive/Рабочий стол/Прога/mp2-lab4-Polinom/Polinoms_Shirshov-Sobol-Yurlov/build/Polinoms.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

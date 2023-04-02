@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ALL_BUILD", "ALL_BUILD.vcxproj", "{0401B37F-9107-353A-A59A-0C2B80F1B93A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15FBCE20-7A7F-393F-825D-5395CDEAB789} = {15FBCE20-7A7F-393F-825D-5395CDEAB789}
+		{CFA1599F-A25A-3300-A286-26D681591ED3} = {CFA1599F-A25A-3300-A286-26D681591ED3}
+		{C94E10E3-9B12-3C49-B29B-2C1FABA931D0} = {C94E10E3-9B12-3C49-B29B-2C1FABA931D0}
+		{DF0B9260-F50A-3F15-95E0-E7A752AC7747} = {DF0B9260-F50A-3F15-95E0-E7A752AC7747}
+		{1981AB17-82CB-34C6-ACA2-C2B75D962581} = {1981AB17-82CB-34C6-ACA2-C2B75D962581}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Polinoms", "include\Polinoms.vcxproj", "{17623641-05ED-3E84-B458-169420DA8CD5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15FBCE20-7A7F-393F-825D-5395CDEAB789} = {15FBCE20-7A7F-393F-825D-5395CDEAB789}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZERO_CHECK", "ZERO_CHECK.vcxproj", "{15FBCE20-7A7F-393F-825D-5395CDEAB789}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest", "gtest\gtest.vcxproj", "{CFA1599F-A25A-3300-A286-26D681591ED3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15FBCE20-7A7F-393F-825D-5395CDEAB789} = {15FBCE20-7A7F-393F-825D-5395CDEAB789}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sample_polinoms", "samples\sample_polinoms.vcxproj", "{C94E10E3-9B12-3C49-B29B-2C1FABA931D0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15FBCE20-7A7F-393F-825D-5395CDEAB789} = {15FBCE20-7A7F-393F-825D-5395CDEAB789}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "source", "src\source.vcxproj", "{DF0B9260-F50A-3F15-95E0-E7A752AC7747}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15FBCE20-7A7F-393F-825D-5395CDEAB789} = {15FBCE20-7A7F-393F-825D-5395CDEAB789}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test_Polinoms", "test\test_Polinoms.vcxproj", "{1981AB17-82CB-34C6-ACA2-C2B75D962581}"
+	ProjectSection(ProjectDependencies) = postProject
+		{15FBCE20-7A7F-393F-825D-5395CDEAB789} = {15FBCE20-7A7F-393F-825D-5395CDEAB789}
+		{CFA1599F-A25A-3300-A286-26D681591ED3} = {CFA1599F-A25A-3300-A286-26D681591ED3}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0401B37F-9107-353A-A59A-0C2B80F1B93A}.Debug|x64.ActiveCfg = Debug|x64
+		{0401B37F-9107-353A-A59A-0C2B80F1B93A}.Release|x64.ActiveCfg = Release|x64
+		{17623641-05ED-3E84-B458-169420DA8CD5}.Debug|x64.ActiveCfg = Debug|x64
+		{17623641-05ED-3E84-B458-169420DA8CD5}.Release|x64.ActiveCfg = Release|x64
+		{15FBCE20-7A7F-393F-825D-5395CDEAB789}.Debug|x64.ActiveCfg = Debug|x64
+		{15FBCE20-7A7F-393F-825D-5395CDEAB789}.Debug|x64.Build.0 = Debug|x64
+		{15FBCE20-7A7F-393F-825D-5395CDEAB789}.Release|x64.ActiveCfg = Release|x64
+		{15FBCE20-7A7F-393F-825D-5395CDEAB789}.Release|x64.Build.0 = Release|x64
+		{CFA1599F-A25A-3300-A286-26D681591ED3}.Debug|x64.ActiveCfg = Debug|x64
+		{CFA1599F-A25A-3300-A286-26D681591ED3}.Debug|x64.Build.0 = Debug|x64
+		{CFA1599F-A25A-3300-A286-26D681591ED3}.Release|x64.ActiveCfg = Release|x64
+		{CFA1599F-A25A-3300-A286-26D681591ED3}.Release|x64.Build.0 = Release|x64
+		{C94E10E3-9B12-3C49-B29B-2C1FABA931D0}.Debug|x64.ActiveCfg = Debug|x64
+		{C94E10E3-9B12-3C49-B29B-2C1FABA931D0}.Debug|x64.Build.0 = Debug|x64
+		{C94E10E3-9B12-3C49-B29B-2C1FABA931D0}.Release|x64.ActiveCfg = Release|x64
+		{C94E10E3-9B12-3C49-B29B-2C1FABA931D0}.Release|x64.Build.0 = Release|x64
+		{DF0B9260-F50A-3F15-95E0-E7A752AC7747}.Debug|x64.ActiveCfg = Debug|x64
+		{DF0B9260-F50A-3F15-95E0-E7A752AC7747}.Debug|x64.Build.0 = Debug|x64
+		{DF0B9260-F50A-3F15-95E0-E7A752AC7747}.Release|x64.ActiveCfg = Release|x64
+		{DF0B9260-F50A-3F15-95E0-E7A752AC7747}.Release|x64.Build.0 = Release|x64
+		{1981AB17-82CB-34C6-ACA2-C2B75D962581}.Debug|x64.ActiveCfg = Debug|x64
+		{1981AB17-82CB-34C6-ACA2-C2B75D962581}.Debug|x64.Build.0 = Debug|x64
+		{1981AB17-82CB-34C6-ACA2-C2B75D962581}.Release|x64.ActiveCfg = Release|x64
+		{1981AB17-82CB-34C6-ACA2-C2B75D962581}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4CD3D14-930C-33A1-81EF-BD99C930CD89}
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
