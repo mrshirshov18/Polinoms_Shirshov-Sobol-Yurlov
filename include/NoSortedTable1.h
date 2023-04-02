@@ -1,33 +1,32 @@
 #pragma once
+#include "Polinom.h"
 #include <iostream>
 #include <vector>
-#include <list>
 #include <string>
 using namespace std;
-template <typename Tkey, typename TValue>
-class NoSortedTable2
+typedef string Tkey;
+typedef Polinom TValue ;
+//template <, >
+class NoSortedTable1
 {
+    int const MaxSize = 100;
     struct TTableRec {
         Tkey key;
         TValue value;
     };
-    //f_list <TTableRec> data;
-    list<TTableRec> data;
+    vector <TTableRec> data{};
+
+
 public:
-    NoSortedTable2() = default;
+    NoSortedTable1() = default;
     size_t size() const noexcept { return data.size(); }
-    TValue& operator[](size_t pos) {
-        int i = 0;
-        for (auto& val : data)
-            if (i == pos)
-                return val.value;
-    }//?
+    TValue& operator[](size_t pos) { return data[pos].value; }//?
     void Delete(Tkey key) {
-        auto iter = data.begin();
-        for (auto& val : data) {
-            iter++;
-            if (val.key == key) {
-                data.erase(--iter);
+        for (auto& elem : data) {
+            if (elem.key == key) {
+                elem.key = data[data.size() - 1].key;
+                elem.value = data[data.size() - 1].value;
+                data.pop_back();
                 return;
             }
         }
@@ -38,13 +37,12 @@ public:
                 return &val.value;
         return nullptr;
     }
-
     void Insert(Tkey key, TValue value) {
         if (Find(key))
             return;
         data.push_back({ key,value });
     }
-    vector <string> GiveTable() {
+    vector<string> GiveTable() {
         vector<string> arr;
         for (auto& elem : data) {
             arr.push_back(elem.key + " = " + elem.value.GivePolinom());
