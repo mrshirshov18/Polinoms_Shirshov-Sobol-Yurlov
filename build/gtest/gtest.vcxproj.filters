@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\gtest\gtest-all.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\gtest\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{EF5DC6BB-C6FC-355F-B69C-B39B043448F3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
