@@ -19,25 +19,12 @@ string f3(string num, string expression, string name) {
     TPostfix tre(expression);
     int pos=stoi(num);
     Polinom res = tre.Calculate(pos, A, B, C, D, E, F);
-    switch (pos) {
-        case 1:
             A.Insert(name,res);
-            break;
-        case 2:
             B.Insert(name, res);
-            break;
-        case 3:
             C.Insert(name, res);
-            break;
-        case 4:
             D.Insert(name, res);
-            break;
-        case 5:
             E.Insert(name, res);
-            break;
-        case 6:
             F.Insert(name, res);
-            break;
     }
 }
 string f1(string pol1,string pol2,string Znak) {
