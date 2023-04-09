@@ -2,9 +2,9 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include "Polinom.h"
 using namespace std;
-typedef string Tkey;
-typedef Polinom TValue;
+template< typename Tkey, typename TValue>
 class SortedTable
 {
     struct TTableRec {
@@ -38,6 +38,8 @@ public:
     size_t size() const noexcept { return data.size(); }
     TValue& operator[](size_t pos) { return data[pos].value; }//?
     void Delete(Tkey key) {
+        if (nullptr == Find(key))
+            return;
         int pos = binary_search(key);
         for (size_t i = pos; i < data.size() - 1; i++) {
             data[i] = data[i + 1];

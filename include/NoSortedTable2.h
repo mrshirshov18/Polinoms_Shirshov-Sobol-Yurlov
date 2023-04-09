@@ -3,9 +3,11 @@
 #include <vector>
 #include <list>
 #include <string>
+#include "Polinom.h"
 using namespace std;
-typedef string Tkey;
-typedef Polinom TValue;
+//typedef string Tkey;
+//typedef Polinom TValue;
+template< typename Tkey,typename TValue>
 class NoSortedTable2
 {
     struct TTableRec {

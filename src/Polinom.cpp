@@ -151,6 +151,7 @@ void Polinom::Parse() {
 
         case(2):
             infix.emplace_back(name, input_expression.substr(i, input_expression.size()));
+            Name= input_expression.substr(i, input_expression.size());
             i = input_expression.size();
             break;
         }
@@ -450,11 +451,20 @@ void Polinom::Print() {
 }
 string Polinom::GivePolinom() {
     string ans{};
+    int first=1;
     for (auto& item : pol) {
-        if (item.sign == -1)
+        if (item.sign == -1){
             ans += "-";
-        else
-            ans += "+";
+            first=0;
+            }
+        else {
+            
+            if (first==0) {
+                ans+="+";
+                
+            }
+            first=0;
+        }
         ans += (to_string(item.number) + "X^" + to_string(item.degree / (P * P)) + "Y^"
             + to_string((item.degree % (P * P)) / P) + "z^" + to_string(item.degree % P));
     }

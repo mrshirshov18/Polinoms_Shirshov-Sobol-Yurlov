@@ -4,9 +4,7 @@
 #include <vector>
 #include <string>
 using namespace std;
-typedef string Tkey;
-typedef Polinom TValue ;
-//template <, >
+template< typename Tkey, typename TValue>
 class NoSortedTable1
 {
     int const MaxSize = 100;

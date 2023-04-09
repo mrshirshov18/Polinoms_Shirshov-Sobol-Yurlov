@@ -7,13 +7,61 @@
 #include "TreeTable.h"
 #include "Postfix.h"
 
+#define DEBUG
+#ifdef Project
+string f1(string pol1,string pol2,string Znak) {
+    Polinom Pol1(pol1);
+    Polinom Pol2(pol2);
+    Polinom ans;
+    if(Znak=="+"){
+        ans=Pol1+Pol2;
+        return ans.GivePolinom();
+    }
+    if (Znak == "-") {
+        ans = Pol1 - Pol2;
+        return ans.GivePolinom();
+    }
+    if (Znak == "*") {
+        ans = Pol1 * Pol2;
+        return ans.GivePolinom();
+    }
+    /*if (Znak == "/") {
+        ans = Pol1 + Pol2;
+        return ans.GivePolinom();
+    }*/
+}
+string f2_in_point(string pol1,string x,string y,string z) {
+    double X,Y,Z;
+    X=stod(x);
+    Y=stod(y);
+    Z=stod(z);
+    Polinom Pol(pol1);
+    return to_string(Pol.Point(X,Y,Z));
+}
+string f2_const(string pol1, string constant) {
+    double Const;
+    Const=stod(constant);
+    Polinom Pol(pol1);
+    Polinom ans;
+    ans = Pol*Const;
+    return ans.GivePolinom();
+}
+
+int main() {
+    
+}
+#endif // Project
+
+
+
+#ifdef DEBUG
 int main()
 {
     Polinom a("-2XYZ-3XY+8X^2Z^3");
     Polinom b("XYZ+3XY+9X^2Z");
-    NoSortedTable1 A;
+    NoSortedTable1 <string, Polinom> A;
     Polinom c = a + b;
-    Polinom mult=a*b;
+    Polinom mult = a * b;
     cout << a.Point(1.0, 1.0, 1.0) << endl;
     a.Print(); cout << endl;
     b.Print(); cout << endl;
@@ -37,7 +85,7 @@ int main()
     cout << "mult=   ";
     mult.Print();
     cout << endl;
-    
+
     A.Insert("a", a);
     A.Insert("b", b);
     A.Insert("c", c);
@@ -59,7 +107,7 @@ int main()
     cout << endl;
 
 
-    NoSortedTable2 B;
+    NoSortedTable2  <string, Polinom> B;
     B.Insert("a", a);
     B.Insert("b", b);
     B.Insert("c", c);
@@ -71,10 +119,10 @@ int main()
     cout << endl;
     cout << endl;
 
-    
 
 
-    SortedTable  C;
+
+    SortedTable <string, Polinom>  C;
     C.Insert("a", a);
     C.Insert("b", b);
     C.Insert("c", c);
@@ -87,7 +135,7 @@ int main()
     cout << endl;
 
 
-    HashTable1  D;
+    HashTable1  <string, Polinom> D;
     D.Insert("a", a);
     D.Insert("a", a);
     D.Insert("b", b);
@@ -97,23 +145,25 @@ int main()
     D.Print();
     Polinom* pd = D.Find("a");
     pd->Print();
+    //cout<<pd->GetInfix();
     cout << endl;
     cout << endl;
     cout << endl << "Tree";
     cout << endl;
 
 
-    TreeTable E;
+    TreeTable <string, Polinom> E;
     E.Insert("a", a);
     E.Insert("b", b);
     E.Insert("c", c);
     E.Insert("c", c);
     E.Delete("b");
+    E.Delete("c");
     E.Print();
     Polinom* pe = E.Find("a");
     pe->Print();
 
-    HashTable2  G;
+    HashTable2  <string, Polinom> G;
     G.Insert("a", a);
     G.Insert("a", a);
     G.Insert("b", b);
@@ -122,10 +172,10 @@ int main()
     G.Delete("b");
 
 
-    cout<<endl;
+    cout << endl;
     TPostfix tre("a+c+1");
-    Polinom res=tre.Calculate(1,A,B,C,D,G,E);
-    cout<<"res = ";
+    Polinom res = tre.Calculate(1, A, B, C, D, G, E);
+    cout << "res = ";
     res.Print();
     cout << endl;
     TPostfix tfgdf("a*a+c+1");
@@ -133,3 +183,6 @@ int main()
     cout << "res = ";
     res2.Print();
 }
+#endif // DEBUG
+
+

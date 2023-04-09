@@ -43,7 +43,8 @@ class TPostfix
 
     void Parse(); //разложить на лексемы
 
-    void GetValues(int n, NoSortedTable1 , NoSortedTable2 , SortedTable , HashTable1,HashTable2,TreeTable);
+    void GetValues(int n, NoSortedTable1<string, Polinom>, NoSortedTable2 <string,Polinom> , SortedTable<string, Polinom>,
+    HashTable1<string, Polinom>,HashTable2<string, Polinom>,TreeTable<string, Polinom>);
 public:
     void ToPostfix();//сделать обратную польскую запись дл€ подсчета
     TPostfix(string _input_expression) :input_expression(_input_expression) {
@@ -64,7 +65,8 @@ public:
     }
 
     //Polinom Calculate(int n, NoSortedTable1 A, NoSortedTable2 B);// ¬вод переменных, вычисление по постфиксной форме
-    T Calculate(int n, NoSortedTable1 A, NoSortedTable2 B, SortedTable C, HashTable1 D, HashTable2 G, TreeTable E) { // ¬вод переменных, вычисление по постфиксной форме
+    T Calculate(int n, NoSortedTable1<string, Polinom> A, NoSortedTable2 <string,Polinom> B, SortedTable <string, Polinom>C,
+    HashTable1 <string, Polinom>D, HashTable2 <string, Polinom>G, TreeTable <string, Polinom>E) { // ¬вод переменных, вычисление по постфиксной форме
         GetValues(n, A, B,C,D,G,E);
         Stack<Polinom> st;
         //T leftoperand();

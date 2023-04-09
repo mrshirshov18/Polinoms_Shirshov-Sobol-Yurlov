@@ -15,7 +15,7 @@ class Polinom
 {
     int P = 10; //MaxDegree
     string input_expression;
-    string Name;
+    string Name="=pol";
     enum lexemType {
         nothing,
         number,
@@ -47,7 +47,10 @@ public:
     Polinom operator=(Polinom);
     Polinom();
     Polinom(string input, string name = "pol");
-    string GetInfix() { return input_expression.erase(input_expression.size() - Name.size() - 1, Name.size() + 1); }
+    string GetInfix() { 
+        Parse();
+        return input_expression.erase(input_expression.size() - Name.size() - 1, Name.size() + 1);
+    }
     int Get_size_of_name() { return Name.size(); }
     void Give_name(string name) { Name = name; }
     string Get_name() { return Name; }

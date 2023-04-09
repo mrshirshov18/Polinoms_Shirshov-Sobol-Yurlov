@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include "Polinom.h"
 using namespace std;
-typedef string Tkey;
-typedef Polinom TValue;
+template< typename Tkey, typename TValue>
 class HashTable2
 {
     int static const MaxSize = 101;

@@ -200,7 +200,9 @@ void TPostfix::ToPostfix() {
     }
 }
 
-void TPostfix::GetValues(int n, NoSortedTable1 A, NoSortedTable2 B, SortedTable C, HashTable1 D, HashTable2 G, TreeTable E) {
+void TPostfix::GetValues(int n, NoSortedTable1 <string, Polinom> A, NoSortedTable2 <string, Polinom> B, 
+SortedTable <string, Polinom> C,
+HashTable1<string, Polinom> D, HashTable2<string, Polinom> G, TreeTable<string, Polinom> E) {
     for (auto& op : operands) {
         //op.second=A.FindPol(op.first);
         switch(n){

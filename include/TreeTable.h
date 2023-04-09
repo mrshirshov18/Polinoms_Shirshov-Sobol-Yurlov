@@ -2,9 +2,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Polinom.h"
 using namespace std;
-typedef string Tkey;
-typedef Polinom TValue;
+template< typename Tkey, typename TValue>
 class TreeTable
 {
     struct TTableRec {
@@ -157,7 +157,7 @@ public:
             if (Node->pLeft == nullptr && Node->pRight == nullptr) {
 
                 TNode* TempNode = Node->pLeft;
-                while (TempNode->pRight != nullptr)
+                while (TempNode != nullptr)
                     TempNode = TempNode->pRight;
                 TNode* ParTNode = FindParent(TempNode->data.key, TempNode, pRoot);
                 if (IsLeaf(TempNode)) {
