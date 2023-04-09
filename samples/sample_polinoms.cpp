@@ -7,8 +7,39 @@
 #include "TreeTable.h"
 #include "Postfix.h"
 
-#define DEBUG
+#define Project
 #ifdef Project
+NoSortedTable1 <string, Polinom> A;
+NoSortedTable2  <string, Polinom> B;
+SortedTable <string, Polinom>  C;
+HashTable1  <string, Polinom> D;
+HashTable2  <string, Polinom> E;
+TreeTable <string, Polinom> F;
+string f3(string num, string expression, string name) {
+    TPostfix tre(expression);
+    int pos=stoi(num);
+    Polinom res = tre.Calculate(pos, A, B, C, D, E, F);
+    switch (pos) {
+        case 1:
+            A.Insert(name,res);
+            break;
+        case 2:
+            B.Insert(name, res);
+            break;
+        case 3:
+            C.Insert(name, res);
+            break;
+        case 4:
+            D.Insert(name, res);
+            break;
+        case 5:
+            E.Insert(name, res);
+            break;
+        case 6:
+            F.Insert(name, res);
+            break;
+    }
+}
 string f1(string pol1,string pol2,string Znak) {
     Polinom Pol1(pol1);
     Polinom Pol2(pol2);
