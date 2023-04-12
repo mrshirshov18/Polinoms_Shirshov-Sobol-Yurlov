@@ -41,7 +41,8 @@ class TreeTable
     bool IsLeaf(TNode* pNode) {
         if (pNode->pLeft == pNode->pRight)
             return 1;
-        else 0;
+        else
+            return 0;
     }
     TNode* FindParent(Tkey key, TNode* pNode, TNode* parent) {
         if (pNode == nullptr)
@@ -49,7 +50,7 @@ class TreeTable
         if (key == pNode->data.key)
             return parent;
         if (IsLeaf(pNode))
-            return pNode;
+            return parent;//pNode;
         if (key < pNode->data.key) {
             parent = pNode;
             pNode = FindParent(key, pNode->pLeft, parent);
@@ -154,7 +155,7 @@ public:
                     else
                         pNode->pRight = Node->pLeft;
             }
-            if (Node->pLeft == nullptr && Node->pRight == nullptr) {
+            if (Node->pLeft != nullptr && Node->pRight != nullptr) {//==
 
                 TNode* TempNode = Node->pLeft;
                 while (TempNode != nullptr)

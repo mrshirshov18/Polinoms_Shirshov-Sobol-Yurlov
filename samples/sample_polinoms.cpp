@@ -25,7 +25,7 @@ string f3(string num, string expression, string name) {
             D.Insert(name, res);
             E.Insert(name, res);
             F.Insert(name, res);
-    }
+    return (res.GivePolinom());
 }
 string f1(string pol1,string pol2,string Znak) {
     Polinom Pol1(pol1);

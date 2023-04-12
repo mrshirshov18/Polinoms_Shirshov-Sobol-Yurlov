@@ -22,6 +22,6 @@ TEST(TPostfix, can_calculate_expression_with_numbers_and_variables)
     TPostfix tre("a+c+1");
     Polinom res = tre.Calculate(1, A, B, C, D, G, E);
     string ans = res.GivePolinom();
-    string EXans="-3.000000X^1Y^1z^1-3.000000X^1Y^1z^0+16.000000X^2Y^0z^3+9.000000X^2Y^0z^1+1.000000X^0Y^0z^0";
+    string EXans="-3.000000X^1Y^1Z^1-3.000000X^1Y^1Z^0+16.000000X^2Y^0Z^3+9.000000X^2Y^0Z^1+1.000000X^0Y^0Z^0";
     EXPECT_EQ(EXans, ans);
 }

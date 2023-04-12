@@ -45,7 +45,7 @@ TEST(Polinom, give_name)
     string EXans = "new";
     EXPECT_EQ(ans, EXans);
 }
-TEST(Polinom, get_size_of_name)
+TEST(Polinom, get_siZe_of_name)
 {
     string str = "-2XYZ-3XY+8X^2Z^3";
     Polinom a(str, "a");
@@ -58,7 +58,7 @@ TEST(Polinom, can_parse_right_1)
     string str = "-2XYZ-3XY+8X^2Z^3";
     Polinom a(str,"a");
     string ans=a.GivePolinom();
-    string EXans="-2.000000X^1Y^1z^1-3.000000X^1Y^1z^0+8.000000X^2Y^0z^3";
+    string EXans="-2.000000X^1Y^1Z^1-3.000000X^1Y^1Z^0+8.000000X^2Y^0Z^3";
     EXPECT_EQ(ans, EXans);
 }
 TEST(Polinom, can_parse_right_2)
@@ -66,7 +66,7 @@ TEST(Polinom, can_parse_right_2)
     string str = "XYZ+3XY+9X^2Z";
     Polinom a(str, "a");
     string ans = a.GivePolinom();
-    string EXans = "1.000000X^1Y^1z^1+3.000000X^1Y^1z^0+9.000000X^2Y^0z^1";
+    string EXans = "1.000000X^1Y^1Z^1+3.000000X^1Y^1Z^0+9.000000X^2Y^0Z^1";
     EXPECT_EQ(ans, EXans);
 }
 TEST(Polinom, can_give_point)
@@ -85,7 +85,7 @@ TEST(Polinom, can_add_polinoms)
     Polinom b(str2, "b");
     Polinom c=a+b;
     string ans=c.GivePolinom();
-    string EXans = "-1.000000X^1Y^1z^1+8.000000X^2Y^0z^3+9.000000X^2Y^0z^1";
+    string EXans = "-1.000000X^1Y^1Z^1+8.000000X^2Y^0Z^3+9.000000X^2Y^0Z^1";
     EXPECT_EQ(ans, EXans );
 }
 TEST(Polinom, can_subtract_polinoms)
@@ -96,7 +96,7 @@ TEST(Polinom, can_subtract_polinoms)
     Polinom b(str2, "b");
     Polinom c = a - b;
     string ans = c.GivePolinom();
-    string EXans = "-3.000000X^1Y^1z^1-6.000000X^1Y^1z^0+8.000000X^2Y^0z^3-9.000000X^2Y^0z^1";
+    string EXans = "-3.000000X^1Y^1Z^1-6.000000X^1Y^1Z^0+8.000000X^2Y^0Z^3-9.000000X^2Y^0Z^1";
     EXPECT_EQ(ans, EXans);
 }
 TEST(Polinom, can_multiply_on_const)
@@ -105,7 +105,7 @@ TEST(Polinom, can_multiply_on_const)
     Polinom a(str, "a");
     Polinom c = a*3.0;
     string ans = c.GivePolinom();
-    string EXans = "-6.000000X^1Y^1z^1-9.000000X^1Y^1z^0+24.000000X^2Y^0z^3";
+    string EXans = "-6.000000X^1Y^1Z^1-9.000000X^1Y^1Z^0+24.000000X^2Y^0Z^3";
     EXPECT_EQ(ans, EXans);
 }
 TEST(Polinom, can_multiply_on_negative_const)
@@ -114,7 +114,7 @@ TEST(Polinom, can_multiply_on_negative_const)
     Polinom a(str, "a");
     Polinom c = a * (-3.0);
     string ans = c.GivePolinom();
-    string EXans = "6.000000X^1Y^1z^1+9.000000X^1Y^1z^0-24.000000X^2Y^0z^3";
+    string EXans = "6.000000X^1Y^1Z^1+9.000000X^1Y^1Z^0-24.000000X^2Y^0Z^3";
     EXPECT_EQ(ans, EXans);
 }
 TEST(Polinom, can_add_const)
@@ -123,7 +123,7 @@ TEST(Polinom, can_add_const)
     Polinom a(str, "a");
     Polinom c = a + 2.1;
     string ans = c.GivePolinom();
-    string EXans = "-2.000000X^1Y^1z^1-3.000000X^1Y^1z^0+8.000000X^2Y^0z^3+2.100000X^0Y^0z^0";
+    string EXans = "-2.000000X^1Y^1Z^1-3.000000X^1Y^1Z^0+8.000000X^2Y^0Z^3+2.100000X^0Y^0Z^0";
     EXPECT_EQ(ans, EXans);
 }
 TEST(Polinom, can_subtract_const)
@@ -132,6 +132,6 @@ TEST(Polinom, can_subtract_const)
     Polinom a(str, "a");
     Polinom c = a - 2.1;
     string ans = c.GivePolinom();
-    string EXans = "-2.000000X^1Y^1z^1-3.000000X^1Y^1z^0+8.000000X^2Y^0z^3-2.100000X^0Y^0z^0";
+    string EXans = "-2.000000X^1Y^1Z^1-3.000000X^1Y^1Z^0+8.000000X^2Y^0Z^3-2.100000X^0Y^0Z^0";
     EXPECT_EQ(ans, EXans);
 }
