@@ -466,7 +466,7 @@ string Polinom::GivePolinom() {
             first=0;
         }
         ans += (to_string(item.number) + "X^" + to_string(item.degree / (P * P)) + "Y^"
-            + to_string((item.degree % (P * P)) / P) + "z^" + to_string(item.degree % P));
+            + to_string((item.degree % (P * P)) / P) + "Z^" + to_string(item.degree % P));
     }
     return ans;
 }

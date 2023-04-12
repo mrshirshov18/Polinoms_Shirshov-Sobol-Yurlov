@@ -16,10 +16,21 @@ class HashTable2
     TTableRec data[MaxSize]{};
     int size;//количество занятых
     int h(Tkey key) {
-        int sum = 0;
+        /*int sum = 0;
         for (char ch : key)
             sum += ch;
-        return sum % MaxSize;
+        return sum % MaxSize;*/
+        const int k = 31, mod = 1e9 + 7;
+
+        //string s = "abacabadaba";
+        long long h = 0, m = 1;
+        for (char c : key) {
+            int x = (int)(c - 'a' + 1);
+            h = (h + m * x) % mod;
+            m = (m * k) % mod;
+        }
+        return h;
+
     }; //хеш функция
     int hh(Tkey key) {
         return (h(key) + p) % MaxSize;

@@ -31,8 +31,8 @@ TEST(TreeTable, can_give_table) {
     A.Insert("a", a);
     A.Insert("b", b);
     vector<string> ans=A.GiveTable();
-    vector<string> EXans={"a = -2.000000X^1Y^1z^1-3.000000X^1Y^1z^0+8.000000X^2Y^0z^3",
-    "b = 1.000000X^1Y^1z^1+3.000000X^1Y^1z^0+9.000000X^2Y^0z^1"};
+    vector<string> EXans={"a = -2.000000X^1Y^1Z^1-3.000000X^1Y^1Z^0+8.000000X^2Y^0Z^3",
+    "b = 1.000000X^1Y^1Z^1+3.000000X^1Y^1Z^0+9.000000X^2Y^0Z^1"};
     EXPECT_EQ(ans, EXans);
 }
 TEST(TreeTable, can_insert_right) {
@@ -40,7 +40,7 @@ TEST(TreeTable, can_insert_right) {
     Polinom a("-2XYZ-3XY+8X^2Z^3");
     A.Insert("a", a);
     vector<string> ans = A.GiveTable();
-    vector<string> EXans = { "a = -2.000000X^1Y^1z^1-3.000000X^1Y^1z^0+8.000000X^2Y^0z^3"};
+    vector<string> EXans = { "a = -2.000000X^1Y^1Z^1-3.000000X^1Y^1Z^0+8.000000X^2Y^0Z^3"};
     EXPECT_EQ(ans, EXans);
 }
 TEST(TreeTable, can_nit_insert_same_polinoms) {
@@ -49,7 +49,7 @@ TEST(TreeTable, can_nit_insert_same_polinoms) {
     A.Insert("a", a);
     A.Insert("a", a);
     vector<string> ans = A.GiveTable();
-    vector<string> EXans = { "a = -2.000000X^1Y^1z^1-3.000000X^1Y^1z^0+8.000000X^2Y^0z^3" };
+    vector<string> EXans = { "a = -2.000000X^1Y^1Z^1-3.000000X^1Y^1Z^0+8.000000X^2Y^0Z^3" };
     EXPECT_EQ(ans, EXans);
 }
 TEST(TreeTable, can_delete_right) {
@@ -60,6 +60,6 @@ TEST(TreeTable, can_delete_right) {
     A.Insert("b", b);
     A.Delete("b");
     vector<string> ans = A.GiveTable();
-    vector<string> EXans = { "a = -2.000000X^1Y^1z^1-3.000000X^1Y^1z^0+8.000000X^2Y^0z^3" };
+    vector<string> EXans = { "a = -2.000000X^1Y^1Z^1-3.000000X^1Y^1Z^0+8.000000X^2Y^0Z^3" };
     EXPECT_EQ(ans, EXans);
 }
