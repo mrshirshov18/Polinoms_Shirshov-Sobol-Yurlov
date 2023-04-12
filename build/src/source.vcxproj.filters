@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\src\HashTable1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\src\HashTable2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\src\NoSortedTable2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\NoSotrtedTable1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\src\Polinom.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\src\Postfix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\src\SortedTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\src\TreeTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\HashTable1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\HashTable2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\NoSortedTable1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\NoSortedTable2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\Polinom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\Postfix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\SortedTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\include\TreeTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\stack.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\lubas\OneDrive\Рабочий стол\Прога\mp2-lab4-Polinom\Polinoms_Shirshov-Sobol-Yurlov\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{99BAA833-04A6-3600-9875-716C98E4C1FF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{EF5DC6BB-C6FC-355F-B69C-B39B043448F3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
