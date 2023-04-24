@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Polinoms.com</title>
+    <script src="eel.js"></script>
+    <link rel="icon" type="image/png" href="/Icon.png">
+    <link rel="stylesheet" href="css/txt.css">
+</head>
+<body background="фон.jpeg">
+
+    <div align="center">
+        <img src="Icon.png" alt="icon" class="logo">
+        <h1>The Polynomial Calculator</h1>
+        <h3>!Работа с двумя полиномами!</h3>
+        <input type="text1" class="put1" id="Input1" placeholder="Введите первый полином..." required><br>
+        <button onclick="document.getElementById('Input1').value = ''" >Очистить поле ввода</button><br>
+        <br>
+        <input type="text" class="put2" id="Input2" placeholder="Введите второй полином..." required><br>
+        <button onclick="document.getElementById('Input2').value = ''" >Очистить поле ввода</button><br>
+        <br>
+
+                 <img src="плюс.jpg" width="50px" class="image">
+                 <img src="минус.jpg" width="50px" class="image">
+                 <img src="умножение.jpg" width="50px" class="image">
+                 <img src="деление.jpg" width="50px" class="image">
+        <div class="btn-group-toggle pricing-levels-3 d-inline-block" data-toggle="button-checkbox">
+            <div class="switch1">
+                <input type="checkbox" class="newswitch1" name="group1[]">
+            </div>
+            <div class="switch2">
+                <input type="checkbox" class="newswitch2" name="group1[]">
+            </div>
+            <div class="switch3">
+                <input type="checkbox" class="newswitch3" name="group1[]">
+            </div>
+            <div class="switch4">
+                <input type="checkbox" class="newswitch4" name="group1[]">
+            </div></div>
+
+        <button id="newButton" class="theme-button" type="button">Получить результат</button>
+    </div>
+    <div class="out"></div>
+    <div class="in"></div>
+    <div class="inout"></div>
+    <div class="икс"></div>
+    <div class="игрек"></div>
+    <div class="зед"></div>
+    <div class="константа"></div>
+    <div class="кнопка1"></div>
+    <div class="кнопка2"></div>
+    <div class="кнопка3"></div>
+    <div class="кнопка4"></div>
+    <div class="name"></div>
+    <div align="center">
+    <h3>!Работа с одним полиномом!</h3>
+        <input type="text3" class="put3" id="Input3" placeholder="Введите полином..." required><br>
+        <button onclick="document.getElementById('Input3').value = ''" >Очистить поле ввода</button><br>
+        <br>
+        <B>Подсчет в точке (введите координаты):</B><br>
+        <br>
+        <input type="text3" class="put4" id="Mini1" placeholder="X: " required><br>
+        <input type="text3" class="put5" id="Mini2" placeholder="Y: " required><br>
+        <input type="text3" class="put6" id="Mini3" placeholder="Z:" required><br>
+        <br>
+        <B>Умножение на константу:</B><br>
+        <br>
+        <input type="text3" class="put7" id="Mini4" placeholder="Const: " required><br>
+        <button id="newButton1" class="theme-button1" type="button">Получить результат</button>
+    </div>
+    <div align="center">
+    <h3>!Операции с длинными выражениями!</h3>
+        <B>Пожалуйста, выберите табличное хранение выражения:</B>
+    </div>
+    <br>
+    <div>
+        <div>
+            <input type="radio" class="i-7" id="i71" checked name="rb1" value="1">
+            <label for="i71"><B>Линейная на массиве</B></label>
+        </div>
+        <div>
+            <input type="radio" class="i-7" id="i72" name="rb1" value="2">
+            <label for="i72"><B>Линейная на списке</B></label>
+        </div>
+        <div>
+            <input type="radio" class="i-7" id="i73" name="rb1" value="3">
+            <label for="i73"><B>Упорядоченная на массиве</B></label>
+        </div>
+        <div>
+            <input type="radio" class="i-7" id="i74" name="rb1" value="4">
+            <label for="i74"><B>Дерево</B></label>
+        </div>
+        <div>
+            <input type="radio" class="i-7" id="i75" name="rb1" value="5">
+            <label for="i75"><B>ХЭШ-таблица №1</B></label>
+        </div>
+        <div>
+            <input type="radio" class="i-7" id="i76" name="rb1" value="6">
+            <label for="i76"><B>ХЭШ-таблица №2</B></label>
+        </div>
+    <br>
+    <div align="center">
+        <button id="newButton3" class="theme-button3" type="button">Вывод таблицы</button>
+        <br>
+        <br>
+
+    </div>
+        </div>
+
+
+
+
+
+
+    <script src="script.js">
+    </script>
+    <script type1="text/javascript">
+    let reg1=/[A-W А-Я а-я a-z !`~"@#№;$%:&?*()=_\.,<>/]/g
+        Input1.oninput=function(){
+            this.value=this.value.replace(reg1, '')
+        }
+    let reg2=/[A-W А-Я а-я a-z !`~"@#№;$%:&?*()=_\.,<>/]/g
+        Input2.oninput=function(){
+            this.value=this.value.replace(reg2, '')
+        }
+    let reg3=/[A-W А-Я а-я a-z !`~"@#№;$%:&?*()=_\.,<>/]/g
+        Input3.oninput=function(){
+            this.value=this.value.replace(reg3, '')
+        }
+    let reg4=/[A-Z А-Я а-я a-z !`~"@#№;$%^:&?*()=_\,<>/+-]/g
+        Mini1.oninput=function(){
+            this.value=this.value.replace(reg4, '')
+        }
+    let reg5=/[A-Z А-Я а-я a-z !`~"@#№;$%^:&?*()=_\,<>/+-]/g
+        Mini2.oninput=function(){
+            this.value=this.value.replace(reg5, '')
+        }
+    let reg6=/[A-Z А-Я а-я a-z !`~"@#№;$%^:&?*()=_\,<>/+-]/g
+        Mini3.oninput=function(){
+            this.value=this.value.replace(reg6, '')
+        }
+    let reg7=/[A-Z А-Я а-я a-z !`~"@#№;$%^:&?*()=_\.,<>/+-]/g
+        Mini4.oninput=function(){
+            this.value=this.value.replace(reg7, '')
+        }
+    let reg8=/[А-Я а-я a-z !`~"@#№;$%^:&?*()=_\.,<>/]/g
+        Input8.oninput=function(){
+            this.value=this.value.replace(reg8, '')
+        }
+    </script>
+</body>
+</html>
+

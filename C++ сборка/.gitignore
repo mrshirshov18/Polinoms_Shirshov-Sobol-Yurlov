@@ -1,0 +1,17 @@
+/bin
+/lib
+/build
+/x64
+/out
+/Debug
+/Release
+/.vs
+*.user
+*.sln
+*.vcxproj
+*.filters
+CMakeCache.txt
+cmake_install.cmake
+CMakeFiles
+*.dir
+*.cashe
